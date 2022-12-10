@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="enigme.style.css">
+    <title>Une petite enigme !</title>
+</head>
+
+<body>
+    <p id="astuce">Tu peux cliquer sur les textes pour les <span style="color: #F63D3A;">copier</span> !</p> 
+    <div class="container">
+        <div class="load">
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+        </div>
+        <main>
+            <h1>Aller ... un petit Casse-tête</h1>
+            <form id="result" action="birthsday.html">
+                <div class="letters">
+                    <div class="letter">
+                        <label for="l2" data-toggle="tooltip" title="Hooray!">48°48'15.4"N 2°09'35.1"E</label>
+                        <input type="text" id="l2" required>
+                    </div>
+                    <div class="letter">
+                        <label for="l3">37°37'42.5"S 144°57'19.6"E</label>
+                        <input type="text" id="l3" required>
+                    </div>
+                </div>
+                <div class="letters">
+                    <div class="letter">
+                        <label for="la">37°49'24.6"S 144°58'28.9"E</label>
+                        <input type="text" id="la" required>
+                    </div>
+                    <div class="letter">
+                        <label for="ln">37°59'37.6"S 141°43'16.3"E</label>
+                        <input type="text" id="ln" required>
+                    </div>
+                    <div class="letter">
+                        <label for="ls">38°12'28.2"S 145°23'17.2"E</label>
+                        <input type="text" id="ls" required>
+                    </div>
+                </div>
+                <div class="letters">
+                    <div class="letter">
+                        <label for="faute">Ah ... J'ai fait une petite faute d'orthographe dans un mot hier. Tu vas
+                            devoir la corriger*</label>
+                        <input type="text" id="faute" required>
+                    </div>
+                </div>
+                <button type="submit" class="buttondown">Next</button>
+
+            </form>
+        </main>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container text-center">
+            <span class="text-muted">
+                <p><strong>&copy; 2019 youcefmegoura.ml | All Rights Reserved.</strong></p>
+            </span>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    /* REMOVE 000WEBHOST ADS */
+    $("footer + div").remove();
+    $("footer + script").remove();
+
+    /*Form*/
+    $("form#result").submit(function () {
+        if (
+            $("#l2").val() == "2" &&
+            $("#l3").val() == "3" &&
+            $("#la").val().toLocaleLowerCase() == "a" &&
+            $("#ln").val().toLocaleLowerCase() == "n" &&
+            $("#ls").val().toLocaleLowerCase() == "s" &&
+            $("#faute").val().toLocaleLowerCase() == "bon"
+        ) {
+            $(".buttondown").mousedown(function () {
+                $(".buttondown").text("Next");
+            });
+            $(".buttondown").mouseup(function () {
+                $(".buttondown").text("Next");
+            });
+            return true;
+        } else {
+            $(".buttondown").mousedown(function () {
+                $(".buttondown").text("Non ! Essayes encore");
+            });
+            $(".buttondown").mouseup(function () {
+                $(".buttondown").text("Next");
+            });
+            return false;
+        }
+
+    });
+
+
+    $("label").click(function () {
+        var text = $(this).text();
+        navigator.clipboard.writeText(text).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+        }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+        });
+    });
+</script>
+
+</html>

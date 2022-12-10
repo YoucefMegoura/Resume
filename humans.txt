@@ -1,0 +1,25 @@
+                            
+Site: youcefmegoura.ga
+
+Facebook: https://www.facebook.com/youcefmegoura                            
+Twitter: https://twitter.com/youcefmegoura
+Github: https://github.com/YoucefMegoura
+LinkedIn: https://www.linkedin.com/in/youcefmegoura/
+Phone: +213-699-230-385
+Email: ymegoura@gmail.com
+                            
+Location: Constantine, Algeria
+                            
+
+
+/* SITE */                  
+Last update:  2019/06/13 
+
+                            
+Standards: HTML5, CSS3, JS, PHP
+
+                            
+Freamwork: jQuery.
+
+                            
+Software: Brackets, PhpStorm.

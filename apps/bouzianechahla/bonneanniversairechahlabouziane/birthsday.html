@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+	<link rel="stylesheet" href="birthday.style.css">
+	<title>Bonne anniversaire Chahla Bouziane</title>
+</head>
+
+<body>
+	<div class="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="lastofus.jpg">
+		</div>
+		<div class="details">
+			<h4 class="color1">La multi ani Chahla</h2>
+			<h4 class="color2 margin">(Bon anniversaire)</h3>
+			<p>Chahla Bouziane;</p>
+			<p>Une ravissante jolie vénusienne qui a</p>
+			<p>passé déjà 23 ans dans cette vie,</p>
+			<p>avec surement des moments de joies</p>
+			<p>comme avec des moments de douleurs.</p>
+			<p>Je ne peux pas dire que demain sera</p>
+			<p>meilleur, mais j'espère que tu feras</p>
+			<p>de ton mieux pour être aujourd'hui une</p>
+			<p>version plus developpée qu'hier et bien</p>
+			<p>moins bonne que demain... Merci d'exister</p>
+			<p class="text-right">Bon Anniversaire petit ange</p>
+			<p class="text-right">Youcef Megoura</p>
+		</div>
+	</div>
+	<footer>
+		<div class="container text-center">
+        </div>
+	</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.core.min.js"></script>
+<script>
+	/* REMOVE 000WEBHOST ADS */
+    $("footer + div").remove();
+	$("footer + script").remove();
+
+	var sound = new Howl({
+	src: ['Happy-Birthday-Romanian.mp3']
+	});
+
+	sound.play();
+
+	// Change global volume.
+	Howler.volume(0.5);
+</script>
+
+</html>
