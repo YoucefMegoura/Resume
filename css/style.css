@@ -362,10 +362,6 @@ ul,ol
     font-size: 22px;
 }
 
-textarea#message{
-    resize: none!important;
-}
-
 /* FOOTER */
 footer{
     background: #333;
@@ -401,9 +397,6 @@ footer .social {
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
 }
-footer #social-ph:hover {
-    color: #1abb14;
-}
 footer #social-fb:hover {
     color: #3B5998;
 }
@@ -422,7 +415,4 @@ footer #social-gp:hover {
 footer #social-em:hover {
     color: #f39c12;
 }
-
-
-
 /**/

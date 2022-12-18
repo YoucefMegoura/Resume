@@ -1,5 +1,8 @@
 $(function () {
-   
+
+    // $(this).remove("footer + div");
+    // $(this).remove("footer + script");
+
     /* NAVBAR ANNIMATION */
     $(".navbar a, footer .scrollup a").on("click", function (event) {
         event.preventDefault();
@@ -21,7 +24,6 @@ $(function () {
         loop: true,
         startDelay: 500
     });
-        
 
     /* FORM REQUERMENT | AJAX */
     $('#contact-form').submit(function(e) {
@@ -52,14 +54,5 @@ $(function () {
             }
         });
     });
-
-    /* FAKELOADER-JS */
-    /*$.fakeLoader({
-        timeToHide:3000,
-        zIndex: 99999,
-        spinner:"spinner6",
-        bgColor:"#d82c2e",  
-    });
-    */
 
 })
